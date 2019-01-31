@@ -27,6 +27,10 @@ h5 {
     font-size: 150%;
 }
 
+h6 {
+    font-size: 120%;
+}
+
 #currentButton {
     font-weight: bold;
     cursor: default;
@@ -51,6 +55,30 @@ button:hover {
     transition: background-color 0.2s ease-out;
 }
 
+table {
+    margin-top: 1%;
+
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 3px;
+}
+
+th {
+    background-color: #4B4A67;
+    color: white;
+}
+
+td {
+    background-color: white;
+
+}
+
+
+
 /* Header */
 
 .logo {
@@ -64,7 +92,6 @@ button:hover {
     float: right;
     margin-right: 5%;
     margin-top: 2.3%;
-    margin-bottom: 2.5%;
 }
 
 .headerButton {
@@ -220,8 +247,8 @@ button:hover {
 }
 
 #teamIntroHeader {
-    padding-top: 12%;
-    padding-bottom: 15%;
+    padding-top: 10%;
+    padding-bottom: 17%;
     margin:auto;
     font-size: 900%;
     font-family: 'Alex Brush', cursive;
@@ -294,8 +321,8 @@ button:hover {
 }
 
 #productIntroHeader {
-    padding-top: 12%;
-    padding-bottom: 15%;
+    padding-top: 10%;
+    padding-bottom: 17%;
     margin:auto;
     font-size: 900%;
     font-family: 'Alex Brush', cursive;
@@ -398,4 +425,79 @@ button:hover {
 
 #ocean {
     background-image: url(https://cdna2.zoeysite.com/Adzpo594RQGDpLcjBynL1z/cache=expiry:31536000/compress/https://s3.amazonaws.com/zcom-media/sites/a0iE000000OWoM6IAL/media/catalog/product/y/h/yh3801.2-_1_.jpg);
+}
+
+/* Nitro Product Page */
+
+/* Header */
+#nitroHeader {
+    background-color: #4B4A67;
+    color: white;
+}
+
+#nitroHeader .headerButtonContainer {
+    margin-bottom: 0%;
+}
+
+/* Main Content */
+
+.nitroDetails {
+    padding-top: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 2%;
+    background-image: url(images/productsBackground.jpg);
+    background-size: cover;
+    background-position: center center; 
+    display: grid;
+    grid-template-columns: 55fr 45fr; 
+    grid-gap: 5px;
+}
+
+.nitroDetails h4 {
+    font-size: 350%;
+    margin-top: 3%;
+    font-family: 'Major Mono Display', monospace;
+}
+
+.purchaseInfo {
+    background-color: #F4F3EE;
+}
+
+.purchaseInfo > * {
+    margin-left: 12%;
+    margin-top: 2%;
+    margin-right: 12%;
+}
+
+.rating {
+    display: flex;
+}
+
+.rating img {
+    height: 30px;
+    width: 30px;
+}
+
+.rating h6 {
+    margin-top: 1%; 
+}
+
+.price {
+    color: #8a8a8a
+}
+
+.description {
+    margin-top: 2%;
+}
+
+.purchaseButton {
+    background-color: black;
+    color: white;
+    font-size: 110%;
+}
+
+.purchaseButton:hover {
+    background-color: white;
+    color: black;
 }
