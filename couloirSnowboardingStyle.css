@@ -78,7 +78,6 @@ td {
 }
 
 
-
 /* Header */
 
 .logo {
@@ -97,12 +96,38 @@ td {
 .headerButton {
     font-weight: 100;
     font-size: 150%;
-    padding-right: 20px;
-    padding-left: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
     -webkit-transition: color 0.2s ease-out;
     -moz-transition: color 0.2s ease-out;
     -o-transition: color 0.2s ease-out;
     transition: color 0.2s ease-out;
+    -webkit-transition: border-bottom 0.2s ease-out;
+    -moz-transition: border-bottom 0.2s ease-out;
+    -o-transition: border-bottom 0.2s ease-out;
+    transition: border-bottom 0.2s ease-out;
+    text-decoration: none;
+    border-style: none;
+}
+
+.headerButton:not(#currentButton):hover {
+    border-bottom: 3px solid;
+}
+
+footer {
+    text-align: center;
+    display: flex;
+    background-color: #ACA1A1;
+}
+
+.socialMediaIcon {
+    height: 30px;
+    width: 30px;
+}
+
+footer > * {
+    margin: auto;
+    padding: 10px;
 }
 
 /* Home Page Header */
