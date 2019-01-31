@@ -1,52 +1,66 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
-#logo {
-    height: 13%;
-    width: 13%;
-    padding-top: 1%;
-    padding-left: 2%;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-header {
-    background: url(images/mountain.jpg);
-    background-size: cover;
-    background-position-y: 0%;
+h2 {
+    font-size: 500%;
+    font-family: 'Major Mono Display', monospace;
+}
+
+h3 {
+    font-size: 400%;
+    font-family: 'Major Mono Display', monospace;
+}
+
+h4 {
+    font-size: 200%;
+}
+
+h5 {
+    font-size: 150%;
+}
+
+#currentButton {
+    font-weight: bold;
+    cursor: default;
+}
+
+button {
+    border: none;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
     -webkit-transition: background-color 0.2s ease-out;
     -moz-transition: background-color 0.2s ease-out;
     -o-transition: background-color 0.2s ease-out;
     transition: background-color 0.2s ease-out;
 }
 
-header:hover {
-    background: rgb(27, 27, 27);
+button:hover {
+    -webkit-transition: background-color 0.2s ease-out;
+    -moz-transition: background-color 0.2s ease-out;
+    -o-transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
 }
 
-header:hover > * {
-    color: white;
+/* Header */
+
+.logo {
+    height: 13%;
+    width: 13%;
+    padding-top: 1%;
+    padding-left: 2%;
 }
 
-#homeIntroStrip {
-    background: url(images/mountain.jpg);
-    background-size: cover;
-    background-position-y: 25%;
-    background-repeat: no-repeat;
-    text-align: center;
-}
-
-#introHeader {
-    padding-top: 7%;
-    padding-bottom: 5%;
-    margin:auto;
-    font-size: 500%;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #000000;
-    font-weight: 1000;
-}
-
-#headerButtonContainer {
+.headerButtonContainer {
     float: right;
     margin-right: 5%;
     margin-top: 2.3%;
@@ -54,6 +68,7 @@ header:hover > * {
 }
 
 .headerButton {
+    font-weight: 100;
     font-size: 150%;
     padding-right: 20px;
     padding-left: 20px;
@@ -63,6 +78,324 @@ header:hover > * {
     transition: color 0.2s ease-out;
 }
 
-button {
-    margin-bottom: 7%;
+/* Home Page Header */
+
+#mainHeader {
+    background: url(images/mountain.jpg);
+    background-size: cover;
+    background-color: #aca1a1;
+    background-position-y: 0%;
+    -webkit-transition: background-color 0.4s ease-out;
+    -moz-transition: background-color 0.4s ease-out;
+    -o-transition: background-color 0.4s ease-out;
+    transition: background-color 0.4s ease-out;
+}
+
+#mainHeader:hover {
+    background: #4B4A67;
+}
+
+#mainHeader:hover > * {
+    color: white;
+}
+
+/* Home Page Main Strip*/
+
+#homeIntroStrip {
+    background: url(images/mountain.jpg);
+    background-size: cover;
+    background-position-y: 30%;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+#introHeader {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin:auto;
+    font-size: 900%;
+    font-family: 'Alex Brush', cursive;
+    color: #4B4A67;
+    font-weight: 100;
+}
+
+#shopButton {
+    margin-bottom: 9%;
+    background-color: #4B4A67;
+    color: white;
+    font-size: 130%;
+}
+
+#shopButton:hover {
+    background-color: black;
+}
+
+/* Home Content */
+#missionStrip {
+    text-align:center;
+    display: grid;
+    height: 400px;
+    background-color: #495867;
+    grid-template-columns: 40% 60%;
+}
+
+#missionStrip * {
+    color: #F4F3EE
+}
+
+#missionStrip p {
+    font-size: 140%;
+    margin-top: 14%;
+    margin-right: 20%;
+    margin-left: 10%;
+}
+
+#missionStrip h2 {
+    margin-left: 20%;
+    margin-top: 18%;
+}
+
+#meetOurTeamStrip {
+    background-color: #F4F3EE;
+    display: grid;
+    height: 500px;
+    grid-template-columns: 50% 50%;
+}
+
+#meetOurTeamStrip img {
+    height: 100%;
+    width: 100%;
+}
+
+#meetOurTeamStrip div {
+    text-align: center;
+}
+
+#meetOurTeamStrip h3 {
+    margin: 10%;
+    margin-bottom: 5%;
+    margin-top: 13%;
+}
+
+#teamButton {
+    margin-bottom: 9%;
+    background-color: #000000;
+    color: white;
+    font-size: 110%;
+}
+
+#teamButton:hover {
+    background-color: rgb(168, 168, 168);
+    color: black;
+}
+
+/* Team Header */
+#teamHeader {
+    background: url(images/teamHeaderPic\ \(2\).jpg);
+    background-size: cover;
+    background-color: #797979;
+    background-position-y: 16.1%;
+    -webkit-transition: background-color 0.4s ease-out;
+    -moz-transition: background-color 0.4s ease-out;
+    -o-transition: background-color 0.4s ease-out;
+    transition: background-color 0.4s ease-out;
+}
+
+#teamHeader:hover {
+    background: #4B4A67;
+}
+
+#teamHeader:hover > * {
+    color: white;
+}
+
+/* Team Page Main Strip */
+
+#teamIntroStrip {
+    background: url(images/teamHeaderPic\ \(2\).jpg);
+    background-size: cover;
+    background-position-y: 60%;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+#teamIntroHeader {
+    padding-top: 12%;
+    padding-bottom: 15%;
+    margin:auto;
+    font-size: 900%;
+    font-family: 'Alex Brush', cursive;
+    color: #4B4A67;
+    font-weight: 100;
+}
+
+/* Team Page Content */
+.bio {
+    text-align:center;
+    display: grid;
+    height: 400px;
+}
+
+#travisRiceBio {
+    background-color: #495867;
+    grid-template-columns: 45fr 55fr;
+}
+
+#travisRiceBio * {
+    color: #F4F3EE;
+}
+
+#markMcmorrisBio {
+    background-color: #F4F3EE;
+    grid-template-columns: 55fr 45fr;
+}
+
+.teamPicture {
+    height: 100%;
+    width: 100%;
+}
+
+.bioText {
+    font-size: 130%;
+    margin: 5%;
+}
+
+.bioHeader {
+    margin-top: 5%;
+}
+
+/* Products Header */
+#productHeader {
+    background: url(images/productsBackground.jpg);
+    background-size: cover;
+    background-color: #4b4b4b;
+    background-position-y: 0%;
+    -webkit-transition: background-color 0.4s ease-out;
+    -moz-transition: background-color 0.4s ease-out;
+    -o-transition: background-color 0.4s ease-out;
+    transition: background-color 0.4s ease-out;
+}
+
+#productHeader * {
+    color: white;
+}
+
+#productHeader:hover {
+    background: #4B4A67;
+}
+
+/* Products Main Strip */
+#productIntroStrip {
+    background: url(images/productsBackground.jpg);
+    background-size: cover;
+    background-position-y: 25%;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+#productIntroHeader {
+    padding-top: 12%;
+    padding-bottom: 15%;
+    margin:auto;
+    font-size: 900%;
+    font-family: 'Alex Brush', cursive;
+    color: #4B4A67;
+    font-weight: 100;
+}
+
+/* Products Main Content */
+.products {
+    padding-top: 3%;
+    padding-bottom: 2%;
+    padding-right: 5%;
+    padding-left: 5%;
+    background-color: #495867;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.product {
+    height: 400px;
+    width: 400px;
+    background-size:cover;
+    border-radius: 15px;
+    background-position: center center;
+}
+
+.product div {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    height: 100%;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s ease-out;
+    -moz-transition: opacity 0.4s ease-out;
+    -o-transition: opacity 0.4s ease-out;
+    transition: opacity 0.4s ease-out;
+}
+
+.product:hover div {
+    opacity: 100;
+    -webkit-transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.2s ease-out;
+    -o-transition: opacity 0.2s ease-out;
+    transition: opacity 0.2s ease-out;
+}
+
+.product h4 {
+    padding-top: 35%;
+    padding-bottom: 5%;
+    color: #F4F3EE;
+}
+
+.product h5 {
+    color: #F4F3EE;
+}
+
+.product button {
+    background-color: #F4F3EE;
+    color: black;
+    font-size: 110%;
+}
+
+.product button:hover {
+    background-color: black;
+    color: #F4F3EE;
+}
+
+#nitro {
+    background-image: url(https://images.evo.com/imgp/700/121640/524556/nitro-mystique-snowboard-women-s-2018-142.jpg);
+}
+
+#libtech {
+    background-image: url(https://www.lib-tech.com/media/catalog/product/cache/10f519365b01716ddb90abc57de5a837/2/0/2018-2019-Lib-Tech-Travis-Rice-Pro-HP-Blunt-Snowboard.jpg);
+}
+
+#gnu {
+    background-image: url(https://www.gnu.com/media/catalog/product/cache/10f519365b01716ddb90abc57de5a837/2/0/2018-2019-GNU-Money-Snowboard.jpg);
+}
+
+#flow {
+    background-image: url(https://images.evo.com/imgp/700/105959/457486/flow-five-snowboard-bindings-2017-black.jpg);
+}
+
+#gnuBinding {
+    background-image: url(https://www.gnu.com/media/catalog/product/cache/10f519365b01716ddb90abc57de5a837/2/0/2018-2019-GNU-Psych-Black-Snowboard-Binding-01.jpg);
+}
+
+#maysis {
+    background-image: url(https://images.evo.com/imgp/700/121076/489214/k2-maysis-snowboard-boots-2018-black.jpg);
+}
+
+#soloman {
+    background-image: url(https://i5.walmartimages.com/asr/ddbdc1d8-ccef-4307-8ede-af661916a390_1.d8d3b58763b0e69748a0af2f14eb2639.png?odnBg=ffffff);
+}
+
+#goggles {
+    background-image: url(https://i5.walmartimages.com/asr/6b8bd488-ce0c-4573-b6d2-8430480ea564_1.b7a24bc7df038f46f6b7c2fcd3fa133b.jpeg?odnBg=ffffff);
+}
+
+#ocean {
+    background-image: url(https://cdna2.zoeysite.com/Adzpo594RQGDpLcjBynL1z/cache=expiry:31536000/compress/https://s3.amazonaws.com/zcom-media/sites/a0iE000000OWoM6IAL/media/catalog/product/y/h/yh3801.2-_1_.jpg);
 }

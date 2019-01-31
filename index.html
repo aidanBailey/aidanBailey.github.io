@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <meta charset="utf-8">
     <title>Couloir Snowboarding | Home</title>
     <link href="couloirSnowboardingStyle.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alex+Brush|Major+Mono+Display|Raleway" rel="stylesheet">
   </head>
 
   <body>
-    <header>
-        <img id="logo" src="images/logo.png">
-        <span id="headerButtonContainer">
-            <span class="headerButton">Home</span>
-            <span class="headerButton">Team</span>
-            <span class="headerButton">Products</span>
+    <header id="mainHeader">
+        <a href="index.html">
+            <img class="logo" src="images/logo.png" alt="Couloir Snowboarding">
+        </a>
+        <span class="headerButtonContainer">
+            <span class="headerButton" id="currentButton">Home</span>
+            <a href="team.html"><span class="headerButton">Team</span></a>
+            <a href="products.html"><span class="headerButton">Products</span></a>
             
         </span>
     </header>
 
     <div id="homeIntroStrip">
         <h1 id="introHeader">Couloir Snowboarding</h1>
-        <button id="shopButton" type="button">Shop Now</button>
+        <a href="products.html"><button id="shopButton" type="button">Shop Now</button></a>
     </div>
 
-    <div>
-
+    <div id="missionStrip">
+        <h2>Our Mission</h2>
+        <p>At Couloir Snowboarding, our mission is to see to it that every time you
+                hit the slopes is a new, exciting experience. We aim to deliver some of the most 
+                innovative products to ever hit the market. We promise your riding experience
+                will never be the same once you try our gear.<p>
     </div>
 
-    <div>
-
+    <div id="meetOurTeamStrip">
+        <img src="images/homeTeam.jpg">
+        <div>
+            <h3>Meet Our Team of Professional Riders</h3>
+            <a href="team.html"><button id="teamButton" type="button">Meet Our Riders</button></a>
+        </div>
     </div>
 
     <footer>
-
+        <p>Couloir Snowboarding | 2019 | Legal Documents</p>
     </footer>
   </body>
-  
 </html>
