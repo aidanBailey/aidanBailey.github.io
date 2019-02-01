@@ -210,7 +210,6 @@ footer > * {
 #meetOurTeamStrip {
     background-color: #F4F3EE;
     display: grid;
-    height: 500px;
     grid-template-columns: 50% 50%;
 }
 
@@ -483,6 +482,7 @@ footer > * {
     font-size: 350%;
     margin-top: 3%;
     font-family: 'Major Mono Display', monospace;
+    line-height: 100%;
 }
 
 .purchaseInfo {
