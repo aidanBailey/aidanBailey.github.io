@@ -23,6 +23,10 @@ body {
     padding-top: 10px;
 }
 
+#answerRow {
+    min-height: 25px;
+}
+
 #expression {
     background-color: #90A4AE;
     margin-left: 1%;
