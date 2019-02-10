@@ -24,7 +24,7 @@ body {
 }
 
 #answerRow {
-    min-height: 25px;
+    height: 25px;
 }
 
 #expression {
