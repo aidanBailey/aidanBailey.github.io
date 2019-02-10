@@ -7,13 +7,6 @@ $(document).ready(function(){
         "error": 5});
     let calculatorState = CalculatorStateEnum.clear;
 
-    function isOperator(myChar){
-        if(myChar === '÷' || myChar === '×' || myChar === '+' || myChar === '-')
-            return true;
-        else
-            return false;
-    }
-
     $(".btn-input").click(function(){
         if(calculatorState === CalculatorStateEnum.clear)
             $("#expressionText").text("");
@@ -23,7 +16,7 @@ $(document).ready(function(){
             $("#expressionText").text("");
             $("#answerText").text("");
         }
-            
+        
         if(calculatorState === CalculatorStateEnum.answer){
             $("#answerText").text("Answer = " + $("#expressionText").text());
             $("#expressionText").text("");
@@ -38,7 +31,14 @@ $(document).ready(function(){
         if(calculatorState === CalculatorStateEnum.clear)
             return;
         
-        if(calculatorState === CalculatorStateEnum.answer || calculatorState === CalculatorStateEnum.error){
+        if(calculatorState === CalculatorStateEnum.answer){
+            $("#answerText").text("Answer = " + $("#expressionText").text());
+            $("#expressionText").text("0");
+            calculatorState = CalculatorStateEnum.clear;
+            return;
+        }
+
+        if(calculatorState === CalculatorStateEnum.error){
             $("#expressionText").text("0");
             calculatorState = CalculatorStateEnum.clear;
             return;
@@ -52,8 +52,9 @@ $(document).ready(function(){
             calculatorState = CalculatorStateEnum.clear;
             return;
         }
-            
-        if(isOperator(slicedExpression[slicedExpression.length - 1]))
+        
+        let lastChar = slicedExpression[slicedExpression.length - 1];
+        if(lastChar === '/' || lastChar === '*' || lastChar === '+' || lastChar === '-')
             calculatorState = CalculatorStateEnum.operation;
         else 
             calculatorState = CalculatorStateEnum.input;
