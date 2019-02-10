@@ -78,10 +78,10 @@ $(document).ready(function(){
         if(calculatorState === CalculatorStateEnum.clear)
             return;
         
+        let expression = $("#expressionText").text()
+        $("#answerText").text(expression + "=")
         try{
-            let expression = $("#expressionText").text()
             let answer = eval(expression);
-            $("#answerText").text(expression + "=")
             $("#expressionText").text(answer);
             calculatorState = CalculatorStateEnum.answer;
         }
