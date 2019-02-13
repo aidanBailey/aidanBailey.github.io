@@ -4,7 +4,8 @@ $(document).ready(function(){
         "answer": 2, 
         "input": 3,
         "operation": 4,
-        "error": 5});
+        "error": 5,
+        "decimal": 6,});
     let calculatorState = CalculatorStateEnum.clear;
 
     $(".btn-input").click(function(){
@@ -22,9 +23,16 @@ $(document).ready(function(){
             $("#expressionText").text("");
         }
 
+        if(calculatorState === CalculatorStateEnum.decimal && event.target.id === "decimalButton")
+            return;
+
         let comExpression = $("#expressionText").text() + $(this).html();
         $("#expressionText").text(comExpression);
-        calculatorState = CalculatorStateEnum.input;
+
+        if(event.target.id === "decimalButton")
+            calculatorState = CalculatorStateEnum.decimal;
+        else
+            calculatorState = CalculatorStateEnum.input;
     });
 
     $("#clearButton").click(function(){
@@ -56,7 +64,9 @@ $(document).ready(function(){
         let lastChar = slicedExpression[slicedExpression.length - 1];
         if(lastChar === '/' || lastChar === '*' || lastChar === '+' || lastChar === '-')
             calculatorState = CalculatorStateEnum.operation;
-        else 
+        else if (lastChar === '.')
+            calculatorState = CalculatorStateEnum.decimal;
+        else
             calculatorState = CalculatorStateEnum.input;
     });
 
@@ -72,7 +82,7 @@ $(document).ready(function(){
         let comExpression = $("#expressionText").text() + operator;
         $("#expressionText").text(comExpression);
         calculatorState = CalculatorStateEnum.operation;
-    })
+    });
 
     $("#resultButton").click(function(){
         if(calculatorState === CalculatorStateEnum.clear)
@@ -89,5 +99,5 @@ $(document).ready(function(){
             $("#expressionText").text("Error!");
             calculatorState = CalculatorStateEnum.error;
         }
-    })
+    });
 });
